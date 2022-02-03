@@ -1,17 +1,25 @@
 'use strict';
 
-var Wolf=function(x,y){
+var layout = layout||{};
+
+layout.class = layout.class||{};
+
+layout.class.Wolf=function(x,y){
     this.X=x;
     this.Y=y;
     this.radius=50;
 };
 
-var Sheep=function(x,y,state){
+layout.class.Sheep=function(x,y,state){
     this.X=x;
     this.Y=y;
     this.state=state; // state的值可以为0,1,2；0为闲置状态，1为在棋盘状态，2为被吃状态。
     this.radius=20;
 };
+
+layout.init=function(){
+    
+}
 
 var chess = function( p ) {
     var screen_width,screen_height; //屏幕的宽和高
@@ -124,7 +132,4 @@ var chess = function( p ) {
     
 }
 
-
-$(document).ready(function () {
-	var custom_p5 = new p5(chess, 'chess');
-});
+layout.init();
