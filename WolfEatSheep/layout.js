@@ -114,7 +114,6 @@ var chess = function( p ) {
                 p.circle(board_startx+sheep.X*board_width,board_starty+sheep.Y*board_width,sheep.radius);
             }
         }
-        
     }
     
     p.preload=function(){
